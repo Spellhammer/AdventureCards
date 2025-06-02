@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdventureCards Maker</title>
+    <!-- Load dependencies before Alpine.js -->
+    <script src="js/libs/fantasy/fantasy-names.js"></script>
+    <script src="js/libs/fantasy/fantasy-surnames.js"></script>
+    <script src="js/libs/fantasy/fantasy-subjects.js"></script>
+    <script src="js/adventurecards.js"></script>
+    <!-- Load Alpine.js last -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div 
+    class="app"
+    x-data="window.ac">
+        <button @click="rollNPCs">Re-roll NPCs</button>
+        <table>
+            <thead>
+                <tr>
+                    <template x-for="(key, index) in npcs[0]">
+                        <th x-text="index"></th>
+                    </template>
+                </tr>
+            </thead>
+            <tbody>
+                <template x-for="npc in npcs">
+                    <tr>
+                        <template x-for="(key, index) in npc">
+                            <td x-text="key"></td>
+                        </template>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

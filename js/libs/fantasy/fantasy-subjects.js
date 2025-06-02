@@ -1,0 +1,50 @@
+let acFantasySubjects = {
+    generate: function() {
+        let subject = this.subjects[Math.floor(Math.random() * this.subjects.length)];
+        return subject
+    },
+    subjects: [
+        'Wealth',
+        'Power',
+        'Knowledge',
+        'Health',
+        'Love',
+        'Hate',
+        'Fear',
+        'Hope',
+        'Affection',
+        'Family',
+        'Community',
+        'Enemies',
+        'Freedom',
+        'Justice',
+        'Peace',
+        'Growth',
+        'Death',
+        'Craftsmanship',
+        'Art',
+        'Science',
+        'Technology',
+        'Magic',
+        'Religion',
+        'Philosophy',
+        'History',
+        'Culture',
+        'Tradition',
+        'Custom',
+        'Law',
+        'Order',
+        'Chaos',
+        'Anarchy',
+        'Destruction',
+        'Creation',
+        'Balance',
+        'Harmony',
+        'Beauty',
+        'Truth',
+        'Knowledge',
+        'Wisdom',
+    ]
+}
+
+window.acFantasySubjects = acFantasySubjects;
